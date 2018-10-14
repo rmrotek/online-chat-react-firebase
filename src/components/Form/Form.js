@@ -12,8 +12,24 @@ class Form extends Component {
     list: [],
   }
 
+
+  //for input field
   handleChange = event => {
-    this.setState({message: event.target.value})
+    this.setState({ message: event.target.value })
+  }
+
+  // send msg to <Message /> component
+  handleSend = () => {
+    // check if there is anything typed
+    if (this.state.message) {
+      // make new msg item to list it later from array
+      var newItem = {
+        userName: this.state.userName,
+        message: this.state.message
+      }
+      // TODO send to db
+      this.setState({ message: '' })
+    }
   }
 
 
@@ -35,7 +51,9 @@ class Form extends Component {
             onChange={this.handleChange}
           />
 
-          <button className='form-msg-send'>Send</button>
+          <button className='form-msg-send' onClick={this.handleSend}>
+            Send
+          </button>
 
         </div>
       </div>
