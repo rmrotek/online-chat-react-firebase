@@ -6,7 +6,7 @@ class Message extends Component {
   render() {
     return (
       <div className="message">
-                <span className="message__author">
+                <span className="message-author">
                     {this.props.message.userName}:
                 </span>
         {this.props.message.message}
