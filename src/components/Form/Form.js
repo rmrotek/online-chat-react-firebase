@@ -8,7 +8,7 @@ class Form extends Component {
 
  
     state = {
-      userName: 'Bob',
+      userName: 'Bob2',
       message: '',
       list: [],
     }
@@ -22,11 +22,7 @@ class Form extends Component {
     this.listenMessages()
   }
   
-
-  
-
-  
-
+// listen for 'messages' changes, get last 10, put them in state.list
   listenMessages()  {
     this.messageRef
       .limitToLast(10)
