@@ -18,14 +18,19 @@ class Form extends Component {
       <div className='form'>
         <div className='form-msg-list'>
           test msg
-          
+
           {/* <Message /> */}
         </div>
 
         <div className='form-input-row'>
-          <input />
+          <input
+            className='form-input'
+            type='text'
+            placeholder='Type message here'
+            value={this.state.message}
+          />
 
-          <button>Send</button>
+          <button className='form-msg-send'>Send</button>
 
         </div>
       </div>
