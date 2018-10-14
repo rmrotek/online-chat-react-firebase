@@ -6,18 +6,20 @@ import firebase from 'firebase';
 
 class Form extends Component {
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
+ 
+    state = {
       userName: 'Bob',
       message: '',
       list: [],
     }
 
     //imports msgs from db
-  this.messageRef = firebase.database().ref().child('messages');
-  this.listenMessages()
+  messageRef = firebase.database().ref().child('messages');
+  
+  
+
+  componentDidMount(){
+    this.listenMessages()
   }
   
 
@@ -31,7 +33,7 @@ class Form extends Component {
       .on('value', message => {
         this.setState({
           list: Object.values(message.val()),
-        },);
+        });
       });
   }
 
