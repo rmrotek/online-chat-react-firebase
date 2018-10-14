@@ -52,19 +52,17 @@ class App extends Component {
           <p>You can sign in with google acccount to change your user name</p>
 
 
-        </div>
-
-        <div className='app-user-login'>
-
-          {!this.state.user ? (
-            <button className='btn' onClick={this.handleSignIn}>Sign in</button>
-
-          ) : (
-              <button className='btn' onClick={this.handleLogOut}>Logout</button>
-
-            )}
+          <div className='app-user-login'>
+            {!this.state.user ? (
+              <button className='btn' onClick={this.handleSignIn}>Sign in</button>
+            ) : (
+                <button className='btn' onClick={this.handleLogOut}>Logout</button>
+              )}
+          </div>
 
         </div>
+
+
 
         <div className='app-main'>
           <Form user={this.state.user} />

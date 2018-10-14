@@ -1,0 +1,16 @@
+.message {
+  font-size: 1.2em;
+  background-color: rgba(150, 226, 226, 0.2);
+  text-align: left;
+  line-height: 1.5;
+}
+
+.message:nth-child(even) {
+  background-color: rgba(8, 51, 243, 0.151);
+
+}
+
+.message-author {
+  font-weight: bold;
+  margin-right: 0.5em;
+}

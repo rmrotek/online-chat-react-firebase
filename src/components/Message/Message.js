@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import './Message.css'
 
 
 //take userName and message props 

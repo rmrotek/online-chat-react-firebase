@@ -3,6 +3,8 @@ import Message from '../Message/Message';
 
 import firebase from 'firebase';
 
+import './Form.css'
+
 
 class Form extends Component {
 
