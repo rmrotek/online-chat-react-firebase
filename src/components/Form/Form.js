@@ -31,7 +31,7 @@ class Form extends Component {
       .on('value', message => {
         this.setState({
           list: Object.values(message.val()),
-        }, console.log(this.state.list));
+        },);
       });
   }
 
@@ -50,7 +50,7 @@ class Form extends Component {
         message: this.state.message
       }
       this.messageRef.push(newItem);
-      this.setState({ message: '' }, console.log(this.state.list))
+      this.setState({ message: '' },)
     }
   }
 
