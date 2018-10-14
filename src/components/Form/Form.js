@@ -13,7 +13,8 @@ class Form extends Component {
   }
 
   //imports msgs from db
-  messageRef = firebase.database().ref().child('messages')
+  messageRef = firebase.database().ref().child('messages');
+  // listenMessages()
 
   listenMessages = () => {
     this.messageRef
@@ -21,7 +22,7 @@ class Form extends Component {
       .on('value', message => {
         this.setState({
           list: Object.values(message.val()),
-        });
+        }, console.log(this.state.list));
       });
   }
 
@@ -57,7 +58,9 @@ class Form extends Component {
         <div className='form-msg-list'>
           test msg
 
-          {/* <Message /> */}
+          { this.state.list.map((item, index) =>
+            <Message key={index} message={item} />
+          )}
         </div>
 
         <div className='form-input-row'>
