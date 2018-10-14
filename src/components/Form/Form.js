@@ -32,6 +32,12 @@ class Form extends Component {
     }
   }
 
+  // make msg send on ENTER press
+  handleKeyPress(event) {
+    if (event.key !== 'Enter') return;
+    this.handleSend();
+  }
+
 
   render() {
     return (
@@ -49,6 +55,8 @@ class Form extends Component {
             placeholder='Type message here'
             value={this.state.message}
             onChange={this.handleChange}
+            onKeyPress={this.handleKeyPress.bind(this)}
+
           />
 
           <button className='form-msg-send' onClick={this.handleSend}>
