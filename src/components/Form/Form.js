@@ -12,6 +12,10 @@ class Form extends Component {
     list: [],
   }
 
+  handleChange = event => {
+    this.setState({message: event.target.value})
+  }
+
 
   render() {
     return (
@@ -28,6 +32,7 @@ class Form extends Component {
             type='text'
             placeholder='Type message here'
             value={this.state.message}
+            onChange={this.handleChange}
           />
 
           <button className='form-msg-send'>Send</button>
