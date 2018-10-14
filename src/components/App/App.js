@@ -56,7 +56,7 @@ class App extends Component {
         </div>
 
         <div className='app-main'>
-          <Form />
+          <Form  user={this.state.user}/>
 
         </div>
 
