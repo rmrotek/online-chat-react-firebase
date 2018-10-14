@@ -13,10 +13,22 @@ class Form extends Component {
   }
 
 
-  render(){
-    return(
-      <>
-      </>
+  render() {
+    return (
+      <div className='form'>
+        <div className='form-msg-list'>
+          test msg
+          
+          {/* <Message /> */}
+        </div>
+
+        <div className='form-input-row'>
+          <input />
+
+          <button>Send</button>
+
+        </div>
+      </div>
     )
   }
 }

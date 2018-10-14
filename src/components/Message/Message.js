@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 
 
 
+//take userName and message props 
+
 class Message extends Component {
   render() {
     return (
