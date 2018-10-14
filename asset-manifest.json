@@ -1,13 +1,13 @@
 {
-  "main.css": "/static/css/main.2d52d3ea.chunk.css",
-  "main.js": "/static/js/main.458e4b62.chunk.js",
-  "main.js.map": "/static/js/main.458e4b62.chunk.js.map",
-  "static/js/1.38eafa24.chunk.js": "/static/js/1.38eafa24.chunk.js",
-  "static/js/1.38eafa24.chunk.js.map": "/static/js/1.38eafa24.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
-  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/css/main.2d52d3ea.chunk.css.map": "/static/css/main.2d52d3ea.chunk.css.map",
-  "index.html": "/index.html",
-  "precache-manifest.25e08174d98c7a0751f77062f9a15f1c.js": "/precache-manifest.25e08174d98c7a0751f77062f9a15f1c.js",
-  "service-worker.js": "/service-worker.js"
+  "main.css": "/online-chat-react-firebase/static/css/main.2d52d3ea.chunk.css",
+  "main.js": "/online-chat-react-firebase/static/js/main.70b4203e.chunk.js",
+  "main.js.map": "/online-chat-react-firebase/static/js/main.70b4203e.chunk.js.map",
+  "static/js/1.66cf95f8.chunk.js": "/online-chat-react-firebase/static/js/1.66cf95f8.chunk.js",
+  "static/js/1.66cf95f8.chunk.js.map": "/online-chat-react-firebase/static/js/1.66cf95f8.chunk.js.map",
+  "runtime~main.js": "/online-chat-react-firebase/static/js/runtime~main.300b6018.js",
+  "runtime~main.js.map": "/online-chat-react-firebase/static/js/runtime~main.300b6018.js.map",
+  "static/css/main.2d52d3ea.chunk.css.map": "/online-chat-react-firebase/static/css/main.2d52d3ea.chunk.css.map",
+  "index.html": "/online-chat-react-firebase/index.html",
+  "precache-manifest.030a053588baff74d748543aa7f35de6.js": "/online-chat-react-firebase/precache-manifest.030a053588baff74d748543aa7f35de6.js",
+  "service-worker.js": "/online-chat-react-firebase/service-worker.js"
 }
