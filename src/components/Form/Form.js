@@ -6,17 +6,26 @@ import firebase from 'firebase';
 
 class Form extends Component {
 
-  state = {
-    userName: 'Bob',
-    message: '',
-    list: [],
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      userName: 'Bob',
+      message: '',
+      list: [],
+    }
+
+    //imports msgs from db
+  this.messageRef = firebase.database().ref().child('messages');
+  this.listenMessages()
   }
+  
 
-  //imports msgs from db
-  messageRef = firebase.database().ref().child('messages');
-  // listenMessages()
+  
 
-  listenMessages = () => {
+  
+
+  listenMessages()  {
     this.messageRef
       .limitToLast(10)
       .on('value', message => {
@@ -41,7 +50,7 @@ class Form extends Component {
         message: this.state.message
       }
       this.messageRef.push(newItem);
-      this.setState({ message: '' })
+      this.setState({ message: '' }, console.log(this.state.list))
     }
   }
 
