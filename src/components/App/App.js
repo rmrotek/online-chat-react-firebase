@@ -49,16 +49,25 @@ class App extends Component {
         <div className='app-header'>
           <h1>Online chat</h1>
           <h4>React + Firebase</h4>
+          <p>You can sign in with google acccount to change your user name</p>
+
+
         </div>
 
         <div className='app-user-login'>
-          <button onClick={this.handleSignIn}>Sign in</button>
-          <button onClick={this.handleLogOut}>Logout</button>
+
+          {!this.state.user ? (
+            <button className='btn' onClick={this.handleSignIn}>Sign in</button>
+
+          ) : (
+              <button className='btn' onClick={this.handleLogOut}>Logout</button>
+
+            )}
 
         </div>
 
         <div className='app-main'>
-          <Form  user={this.state.user}/>
+          <Form user={this.state.user} />
 
         </div>
 
