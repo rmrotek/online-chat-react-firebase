@@ -49,6 +49,7 @@ class App extends Component {
         <div className='app-header'>
           <h1>Online chat</h1>
           <h4>React + Firebase</h4>
+          <a className='credits' href='https://rmrotek.github.io/' rel='noopener noreferrer' target='_blank'>Made by Remigiusz Mrotek</a>
           <p>You can sign in with google acccount to change your user name</p>
 
 
@@ -60,16 +61,11 @@ class App extends Component {
               )}
           </div>
         </div>
-
-
-
         <div className='app-main'>
           <Form user={this.state.user} />
 
         </div>
-
-
-
+       
 
       </div>
     );
