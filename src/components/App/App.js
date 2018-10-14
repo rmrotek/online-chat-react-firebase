@@ -5,7 +5,9 @@ import Form from '../Form/Form'
 
 class App extends Component {
 
-
+  state = {
+    user: null,
+  }
 
 
 
