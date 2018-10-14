@@ -18,6 +18,27 @@ class App extends Component {
     user: null,
   }
 
+  // check for login changes
+  componentDidMount = () => {
+    firebase.auth().onAuthStateChanged(user => {
+      this.setState({ user });
+    });
+  }
+
+
+  // handlers for login and logout
+
+  handleSignIn = () => {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider);
+  }
+
+  handleLogOut = () => {
+    firebase.auth().signOut();
+  }
+
+
+
 
 
   render() {
@@ -29,8 +50,8 @@ class App extends Component {
         </div>
 
         <div className='app-user-login'>
-          <button>Sign in</button>
-          <button>Logout</button>
+          <button onClick={this.handleSignIn}>Sign in</button>
+          <button onClick={this.handleLogOut}>Logout</button>
 
         </div>
 

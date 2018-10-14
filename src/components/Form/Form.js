@@ -63,7 +63,6 @@ class Form extends Component {
     return (
       <div className='form'>
         <div className='form-msg-list'>
-          test msg
 
           { this.state.list.map((item, index) =>
             <Message key={index} message={item} />
