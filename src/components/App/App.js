@@ -18,6 +18,8 @@ class App extends Component {
     user: null,
   }
 
+
+
   // check for login changes
   componentDidMount = () => {
     firebase.auth().onAuthStateChanged(user => {

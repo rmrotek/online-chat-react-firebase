@@ -6,24 +6,32 @@ import firebase from 'firebase';
 
 class Form extends Component {
 
- 
-    state = {
-      userName: 'Bob2',
-      message: '',
-      list: [],
-    }
 
-    //imports msgs from db
+  state = {
+    userName: 'Mr PlaceHolder',
+    message: '',
+    list: [],
+  }
+
+  //reference for 'messages' in db
   messageRef = firebase.database().ref().child('messages');
-  
-  
 
-  componentDidMount(){
+  //imports msgs from db
+  componentDidMount() {
     this.listenMessages()
   }
-  
-// listen for 'messages' changes, get last 10, put them in state.list
-  listenMessages()  {
+
+
+  //when logged in
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.user) {
+      this.setState({ 'userName': nextProps.user.displayName });
+    }
+  }
+
+
+  // listen for 'messages' changes, get last 10, put them in state.list
+  listenMessages() {
     this.messageRef
       .limitToLast(10)
       .on('value', message => {
@@ -48,7 +56,7 @@ class Form extends Component {
         message: this.state.message
       }
       this.messageRef.push(newItem);
-      this.setState({ message: '' },)
+      this.setState({ message: '' })
     }
   }
 
@@ -64,7 +72,7 @@ class Form extends Component {
       <div className='form'>
         <div className='form-msg-list'>
 
-          { this.state.list.map((item, index) =>
+          {this.state.list.map((item, index) =>
             <Message key={index} message={item} />
           )}
         </div>
