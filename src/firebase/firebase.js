@@ -1,4 +1,6 @@
 import firebase from 'firebase';
+import 'firebase/auth';
+
 
 var config = {
   apiKey: "AIzaSyAfuEFWmsjU7AifzBLomYYd459Pz02zysE",
@@ -8,6 +10,13 @@ var config = {
   storageBucket: "online-chat-6203d.appspot.com",
   messagingSenderId: "107912395345"
 };
-firebase.initializeApp(config);
 
-const db = firebase.database();
+if (!firebase.apps.length) {
+    firebase.initializeApp(config);
+  }
+
+  const auth = firebase.auth();
+
+  export {
+    auth,
+  };
