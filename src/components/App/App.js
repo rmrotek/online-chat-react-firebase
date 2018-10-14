@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
+import Form from '../Form/Form';
+import firebase from 'firebase';
+import firebaseConfig from '../../firebase/firebase'
+
+// css last
 import './App.css';
-import Form from '../Form/Form'
+
+//init firebase from cfg
+firebase.initializeApp(firebaseConfig);
+
+
 
 
 class App extends Component {
