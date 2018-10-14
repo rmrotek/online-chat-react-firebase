@@ -59,7 +59,6 @@ class App extends Component {
                 <button className='btn' onClick={this.handleLogOut}>Logout</button>
               )}
           </div>
-
         </div>
 
 

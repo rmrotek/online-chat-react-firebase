@@ -95,6 +95,7 @@ class Form extends Component {
           </button>
 
         </div>
+        <p>Current username: {this.state.userName}</p>
       </div>
     )
   }
