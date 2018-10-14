@@ -12,6 +12,18 @@ class Form extends Component {
     list: [],
   }
 
+  //imports msgs from db
+  messageRef = firebase.database().ref().child('messages')
+
+  listenMessages = () => {
+    this.messageRef
+      .limitToLast(10)
+      .on('value', message => {
+        this.setState({
+          list: Object.values(message.val()),
+        });
+      });
+  }
 
   //for input field
   handleChange = event => {
@@ -27,7 +39,7 @@ class Form extends Component {
         userName: this.state.userName,
         message: this.state.message
       }
-      // TODO send to db
+      this.messageRef.push(newItem);
       this.setState({ message: '' })
     }
   }
